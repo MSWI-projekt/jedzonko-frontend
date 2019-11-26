@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PasswordResetComponent } from './login/password-reset/password-reset.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    PasswordResetComponent,
   ],
   imports: [
     BrowserModule,
