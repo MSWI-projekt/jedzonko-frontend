@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {logindata} from '../model';
+import {logindata} from '../logindata';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +9,14 @@ import {logindata} from '../model';
 
 export class LoginService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
+
   Loginsend(Logindata: logindata) {
     return this.http.post('http://localhost:8888/login', Logindata);
+
+
   }
+
+
 }

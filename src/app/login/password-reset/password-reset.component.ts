@@ -12,6 +12,8 @@ export class PasswordResetComponent implements OnInit {
   email: string;
   constructor(private formBuilder: FormBuilder, private passwordservice: PasswordResetService) {
   }
+
+
   resetpasswordtoservice() {
     return this.formBuilder.group({
       email: ['', Validators.email]

@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PasswordResetComponent } from './login/password-reset/password-reset.component';
 import { ClientFormComponent } from './client-form/client-form.component';
+import { ErrorComponent } from './login/password-reset/error/error.component';
 
 const appRoutes: Routes = [
 
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
     LoginComponent,
     PasswordResetComponent,
     ClientFormComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
