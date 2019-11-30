@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h3>Edycja danych konta</h3>
+        <div class="d-flex justify-content-end social_icon">
+
+        </div>
+      </div>
+
+      <div class="card-body">
+        <form [formGroup]="loginForm">
+
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Imię:</span>
+            </div>
+            <input formControlName="name" [(ngModel)]="name"  name="name" type="text" class="form-control" placeholder="Wojciech">
+          </div>
+
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Nazwisko:</span>
+            </div>
+            <input formControlName="surname" [(ngModel)]="surname"  name="surname" type="text" class="form-control" placeholder="Kowalczewski">
+          </div>
+
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Ulica:</span>
+            </div>
+            <input formControlName="street" [(ngModel)]="street"  name="street" type="text" class="form-control" placeholder="Pijacka 1a">
+          </div>
+
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Kod pocztowy:</span>
+            </div>
+            <input formControlName="postalCode" [(ngModel)]="postalCode"  name="postalCode" type="text" class="form-control" placeholder="02-137">
+          </div>
+
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Miasto:</span>
+            </div>
+            <input formControlName="city" [(ngModel)]="city"  name="city" type="text" class="form-control" placeholder="Warszawa">
+          </div>
+
+          <div class="row align-items-center remember">
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Potwierdź zmiany" class="btn float-right confirm_btn">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<pre>{{loginForm.value | json}}</pre>

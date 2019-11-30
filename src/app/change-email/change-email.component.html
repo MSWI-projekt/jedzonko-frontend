@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h3>Zmień adress e-mail przypisany do konta</h3>
+        <div class="d-flex justify-content-end social_icon">
+
+        </div>
+      </div>
+
+      <div class="card-body">
+        <form [formGroup]="loginForm">
+
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">E-mail:</span>
+            </div>
+            <input formControlName="email" [(ngModel)]="email"  name="email" type="text" class="form-control" placeholder="papiez@watykan.net">
+          </div>
+
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Hasło:</span>
+            </div>
+            <input formControlName="password" [(ngModel)]="password"  name="surname" type="password" class="form-control" placeholder="hasło">
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Potwierdź zmianę" class="btn float-right confirm_btn">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<pre>{{loginForm.value | json}}</pre>
