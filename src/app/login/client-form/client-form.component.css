@@ -228,7 +228,14 @@ input[type="submit"]:hover {
   transition: .5s all;
   background: #8DC26F;
 }
-
+input[type="submit"]:disabled {
+  -webkit-transition: .5s all;
+  -moz-transition: .5s all;
+  -o-transition: .5s all;
+  -ms-transition: .5s all;
+  transition: .5s all;
+  background: gray;
+}
 .agileits-top p {
   font-size: 1em;
   color: #fff;
