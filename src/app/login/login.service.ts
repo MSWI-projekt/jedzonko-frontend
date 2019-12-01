@@ -13,7 +13,7 @@ export class LoginService {
   }
 
   Loginsend(Logindata: logindata) {
-    return this.http.post('http://localhost:8888/login', Logindata);
+    return this.http.post('http://localhost:8888/login/data', Logindata);
 
 
   }
