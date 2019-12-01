@@ -34,8 +34,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <input class="form-control" formControlName="email" type="email" name="email" placeholder="Email" required="">
         <p *ngIf="!clientForm.get('email').valid && clientForm.get('email').dirty" class="error">Pole zawiera niepoprawne dane</p><br>
         <input class="form-control"  formControlName="password" type="password" name="Hasło" placeholder="Hasło" required=""><br>
-<!--        <input class="form-control" formControlName="confirmedPassword" type="password" name="Hasło" placeholder="Potwierdź hasło" required="">-->
-<!--        <p class="error" *ngIf="clientForm.get('password').value !== clientForm.get('confirmedPassword').value">Podane hasła nie są zgodne</p><br>-->
+        <input class="form-control" formControlName="confirmedPassword" type="password" name="Hasło" placeholder="Potwierdź hasło" required="">
+        <p class="error" *ngIf="clientForm.get('password').value !== clientForm.get('confirmedPassword').value">Podane hasła nie są zgodne</p><br>
         <input class="form-control" formControlName="street" type="text"  name="Ulica" placeholder="Ulica" required="">
         <p *ngIf="!clientForm.get('street').valid && clientForm.get('street').dirty" class="error">Pole zawiera niepoprawne dane</p><br>
         <input class="form-control" formControlName="houseFlatNumber" type="text"  name="Nr domu" placeholder="Nr domu" required="">

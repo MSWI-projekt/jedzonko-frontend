@@ -28,7 +28,7 @@ export class ClientFormComponent implements OnInit {
         houseFlatNumber: new FormControl('', Validators.required),
         postalCode: new FormControl('', [Validators.required, Validators.pattern('[0-9]{2}\\-[0-9]{3}')]),
         phoneNumber: new FormControl('', [Validators.required, Validators.pattern('[0-9]{9}')]),
-      //  confirmedPassword: new FormControl('', Validators.required),
+        confirmedPassword: new FormControl('', Validators.required),
         city: new FormControl('', [Validators.required, Validators.pattern('[a-zA-ZŁłąĄćĆęĘóÓśŚżŻźŹ]*') ]),
         userRole: 'Customer'
       });
