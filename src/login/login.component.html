@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h3>Logowanie</h3>
+        <div class="d-flex justify-content-end social_icon">
+
+        </div>
+      </div>
+
+      <div class="card-body">
+        <form [formGroup]="loginForm">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-envelope-square"></i></span>
+            </div>
+            <input formControlName="email" [(ngModel)]="email"  name="email" type="text" class="form-control" placeholder="email">
+
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-key"></i></span>
+            </div>
+            <input formControlName="password"  [(ngModel)]="password"  name="password" type="password" class="form-control" placeholder="hasło">
+          </div>
+          <div class="row align-items-center remember">
+
+          </div>
+          <div class="form-group">
+            <input type="submit" (click)="Loginsend()" value="Zaloguj się" class="btn float-right login_btn">
+          </div>
+        </form>
+      </div>
+
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Nie masz konta?<a href=""  routerLink="/register" routerLinkActive="active">Zarejestruj się</a>
+        </div>
+        <div class="d-flex justify-content-center">
+
+          <a href="" routerLink="/forgetPassword" routerLinkActive="active">Nie pamiętam hasła</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<pre>{{loginForm.value | json}}</pre>
+
+<pre>{{loginForm.get('email').valid | json}}</pre>
+<pre>{{loginForm.get('password').valid | json}}</pre>
