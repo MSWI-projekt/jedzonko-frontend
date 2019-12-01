@@ -9,7 +9,7 @@
       </div>
 
       <div class="card-body">
-        <form [formGroup]="loginForm">
+        <form [formGroup]="changeEmailForm">
 
           <div class="input-group form-group">
             <div class="input-group-prepend">
@@ -22,11 +22,11 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Hasło:</span>
             </div>
-            <input formControlName="password" [(ngModel)]="password"  name="surname" type="password" class="form-control" placeholder="hasło">
+            <input formControlName="password" [(ngModel)]="password"  name="password" type="password" class="form-control" placeholder="hasło">
           </div>
 
           <div class="form-group">
-            <input type="submit" value="Potwierdź zmianę" class="btn float-right confirm_btn">
+            <input type="submit" (click)="emailSend()" value="Potwierdź zmianę" class="btn float-right confirm_btn">
           </div>
 
         </form>
@@ -34,4 +34,6 @@
     </div>
   </div>
 </div>
-<pre>{{loginForm.value | json}}</pre>
+<pre>{{changeEmailForm.value | json}}</pre>
+<pre>{{changeEmailForm.get('email').valid | json}}</pre>
+<pre>{{changeEmailForm.get('password').valid | json}}</pre>

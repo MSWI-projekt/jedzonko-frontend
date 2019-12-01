@@ -9,7 +9,7 @@
       </div>
 
       <div class="card-body">
-        <form [formGroup]="loginForm">
+        <form [formGroup]="editProfileForm">
 
           <div class="input-group form-group">
             <div class="input-group-prepend">
@@ -50,7 +50,7 @@
           </div>
 
           <div class="form-group">
-            <input type="submit" value="Potwierdź zmiany" class="btn float-right confirm_btn">
+            <input type="submit" (click)="profileSend()" value="Potwierdź zmiany" class="btn float-right confirm_btn">
           </div>
 
         </form>
@@ -58,4 +58,9 @@
     </div>
   </div>
 </div>
-<pre>{{loginForm.value | json}}</pre>
+<pre>{{editProfileForm.value | json}}</pre>
+<pre>{{editProfileForm.get('name').valid | json}}</pre>
+<pre>{{editProfileForm.get('surname').valid | json}}</pre>
+<pre>{{editProfileForm.get('street').valid | json}}</pre>
+<pre>{{editProfileForm.get('postalCode').valid | json}}</pre>
+<pre>{{editProfileForm.get('city').valid | json}}</pre>
