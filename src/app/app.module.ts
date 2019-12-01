@@ -13,6 +13,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ChangeEmailComponent } from './change-email/change-email.component';
 import { UpdateSuccessComponent } from './update-success/update-success.component';
 
+
 const appRoutes: Routes = [
 
 ];
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     EditProfileComponent,
     ChangeEmailComponent,
     UpdateSuccessComponent,
+
   ],
   imports: [
     BrowserModule,
