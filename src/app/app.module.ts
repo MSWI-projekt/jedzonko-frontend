@@ -7,11 +7,11 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PasswordResetComponent } from './login/password-reset/password-reset.component';
-import { ClientFormComponent } from './client-form/client-form.component';
+import { ClientFormComponent } from './login/client-form/client-form.component';
 import { ErrorComponent } from './login/password-reset/error/error.component';
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
-import { ChangeEmailComponent } from './change-email/change-email.component';
-import { UpdateSuccessComponent } from './update-success/update-success.component';
+import { EditProfileComponent } from './logged/client/edit-profile/edit-profile.component';
+import { ChangeEmailComponent } from './logged/client/change-email/change-email.component';
+import { UpdateSuccessComponent } from './logged/client/change-email/update-success/update-success.component';
 
 
 const appRoutes: Routes = [

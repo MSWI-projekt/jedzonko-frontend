@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {PasswordResetComponent} from './login/password-reset/password-reset.component';
 import {LoginComponent} from './login/login.component';
-import {ClientFormComponent} from './client-form/client-form.component';
+import {ClientFormComponent} from './login/client-form/client-form.component';
 import {ErrorComponent} from './login/password-reset/error/error.component';
-import {EditProfileComponent} from './edit-profile/edit-profile.component';
-import {ChangeEmailComponent} from './change-email/change-email.component';
-import {UpdateSuccessComponent} from './update-success/update-success.component';
+import {EditProfileComponent} from './logged/client/edit-profile/edit-profile.component';
+import {ChangeEmailComponent} from './logged/client/change-email/change-email.component';
+import {UpdateSuccessComponent} from './logged/client/change-email/update-success/update-success.component';
 
 
 const routes: Routes = [
@@ -18,6 +18,8 @@ const routes: Routes = [
   { path: 'editProfile', component: EditProfileComponent  },
   { path: 'changeEmail', component: ChangeEmailComponent  },
   { path: 'updateSuccess', component: UpdateSuccessComponent  },
+  { path: 'logged/client/changeemail', component: ChangeEmailComponent   }
+
 ];
 
 @NgModule({
