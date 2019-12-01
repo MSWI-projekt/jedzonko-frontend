@@ -7,6 +7,7 @@ import {ErrorComponent} from './login/password-reset/error/error.component';
 import {EditProfileComponent} from './edit-profile/edit-profile.component';
 import {ChangeEmailComponent} from './change-email/change-email.component';
 import {UpdateSuccessComponent} from './update-success/update-success.component';
+import {RegisterSuccessComponent} from './register-success/register-success.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'editProfile', component: EditProfileComponent  },
   { path: 'changeEmail', component: ChangeEmailComponent  },
   { path: 'updateSuccess', component: UpdateSuccessComponent  },
+  { path: 'registerSuccess', component: RegisterSuccessComponent  },
 ];
 
 @NgModule({

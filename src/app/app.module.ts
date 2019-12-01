@@ -12,6 +12,7 @@ import { ErrorComponent } from './login/password-reset/error/error.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ChangeEmailComponent } from './change-email/change-email.component';
 import { UpdateSuccessComponent } from './update-success/update-success.component';
+import { RegisterSuccessComponent } from './register-success/register-success.component';
 
 const appRoutes: Routes = [
 
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     EditProfileComponent,
     ChangeEmailComponent,
     UpdateSuccessComponent,
+    RegisterSuccessComponent,
   ],
   imports: [
     BrowserModule,

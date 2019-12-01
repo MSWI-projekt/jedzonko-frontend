@@ -24,26 +24,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <h1>ZAREJESTRUJ SIĘ</h1>
   <div class="main-agileinfo">
     <div class="agileits-top">
-      <form action="#" method="post">
+      <form [formGroup]="clientForm">
 
 
-        <input class="text" type="text" name="Imię" placeholder="Imię" required=""><br>
-        <input class="text" type="text" name="Nazwisko" placeholder="Nazwisko" required="">
-        <input class="text email" type="email" name="email" placeholder="Email" required="">
-        <input class="text" type="password" name="Hasło" placeholder="Hasło" required="">
-        <input class="text w3lpass" type="password" name="Hasło" placeholder="Potwierdź hasło" required="">
-        <input class="text" type="text" name="Username" placeholder="Username" required="">
+        <input class="form-control" formControlName="name" type="text" name="Imię" placeholder="Imię" required="">
+        <p *ngIf="!clientForm.get('name').valid && clientForm.get('name').dirty" class="error">Pole zawiera niepoprawne dane</p><br>
+        <input class="form-control" formControlName="surname" type="text" name="Nazwisko" placeholder="Nazwisko" required="">
+        <p *ngIf="!clientForm.get('surname').valid && clientForm.get('surname').dirty" class="error">Pole zawiera niepoprawne dane</p><br>
+        <input class="form-control" formControlName="email" type="email" name="email" placeholder="Email" required="">
+        <p *ngIf="!clientForm.get('email').valid && clientForm.get('email').dirty" class="error">Pole zawiera niepoprawne dane</p><br>
+        <input class="form-control"  formControlName="password" type="password" name="Hasło" placeholder="Hasło" required=""><br>
+        <input class="form-control" formControlName="confirmedPassword" type="password" name="Hasło" placeholder="Potwierdź hasło" required="">
+        <p class="error" *ngIf="clientForm.get('password').value !== clientForm.get('confirmedPassword').value">Podane hasła nie są zgodne</p><br>
+        <input class="form-control" formControlName="street" type="text"  name="Ulica" placeholder="Ulica" required="">
+        <p *ngIf="!clientForm.get('street').valid && clientForm.get('street').dirty" class="error">Pole zawiera niepoprawne dane</p><br>
+        <input class="form-control" formControlName="houseFlatNumber" type="text"  name="Nr domu" placeholder="Nr domu" required="">
+        <p *ngIf="!clientForm.get('houseFlatNumber').valid && clientForm.get('houseFlatNumber').dirty" class="error">Pole zawiera niepoprawne dane</p><br>
+        <input class="form-control" formControlName="postalCode" type="text" name="Kod pocztowy" placeholder="Kod pocztowy" required="">
+        <p *ngIf="!clientForm.get('postalCode').valid && clientForm.get('postalCode').dirty" class="error">Pole zawiera niepoprawne dane. Należy podać kod w formacie DD-DDD</p><br>
+        <input class="form-control"  formControlName="city" type="text" name="Miejscowość" placeholder="Miejscowość"  required="">
+        <p *ngIf="!clientForm.get('city').valid && clientForm.get('city').dirty" class="error">Pole zawiera niepoprawne dane.</p><br>
+        <input class="form-control"  formControlName="phoneNumber" type="text" name="Nr telefonu" placeholder="Nr telefonu"  required="">
+        <p *ngIf="!clientForm.get('phoneNumber').valid && clientForm.get('phoneNumber').dirty" class="error">Pole zawiera niepoprawne dane. Nr telefonu powinien zawierać 9 znaków</p><br>
 
         <div class="wthree-text">
           <label class="anim">
-            <input type="checkbox" class="checkbox" required="">
+            <input type="checkbox" class="checkbox"   required="">
             <span>   Zapoznałem się i akceptuje warunki regulaminu</span>
           </label>
           <div class="clear"> </div>
         </div>
-        <input type="submit" value="Zarejestruj">
-      </form>
-      <p>Masz już konto? <a href="#"> Zaloguj się teraz!</a></p>
+        <input type="submit" [disabled]="clientForm.invalid"  (click)="addClient()" routerLink="/registerSuccess" value="Zarejestruj">
+              </form>
+      <p>Masz już konto? <a href="#" routerLink="/login"> Zaloguj się teraz!</a></p>
+
+
+
     </div>
   </div>
 
@@ -63,3 +79,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //main -->
 </body>
 </html>
+
+<pre>{{clientForm.get('name').valid | json}}</pre>
+<pre>{{clientForm.get('phoneNumber').valid | json}}</pre>
+<pre>{{clientForm.get('postalCode').valid | json}}</pre>
+<pre>{{clientForm.get('password').valid | json}}</pre>
+<pre>{{clientForm.get('surname').valid | json}}</pre>
+<pre>{{clientForm.get('city').valid | json}}</pre>
+<pre>{{clientForm.get('street').valid| json}}</pre>
+<pre>{{clientForm.get('houseFlatNumber').valid | json}}</pre>
+<pre>{{clientForm.get('email').valid | json}}</pre>
+
