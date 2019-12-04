@@ -49,13 +49,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         <div class="wthree-text">
           <label class="anim">
-            <input type="checkbox" class="checkbox" required="">
+            <input type="checkbox" class="checkbox"   required="">
             <span>   Zapoznałem się i akceptuje warunki regulaminu</span>
           </label>
           <div class="clear"> </div>
         </div>
-        <input type="submit" [disabled]="clientForm.invalid" (click)="addClient()" value="Zarejestruj">
-      </form>
+        <input type="submit" [disabled]="clientForm.invalid"  (click)="addClient()" routerLink="/registerSuccess" value="Zarejestruj">
+              </form>
       <p>Masz już konto? <a href="#" routerLink="/login"> Zaloguj się teraz!</a></p>
 
 
@@ -80,8 +80,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </body>
 </html>
 
-<pre>{{clientForm.get('name').valid| json}}</pre>
-<pre>{{clientForm.get('phoneNumber').valid| json}}</pre>
-<pre>{{clientForm.get('postalCode').valid| json}}</pre>
-<pre>{{clientForm.value| json}}</pre>
+<pre>{{clientForm.get('name').valid | json}}</pre>
+<pre>{{clientForm.get('phoneNumber').valid | json}}</pre>
+<pre>{{clientForm.get('postalCode').valid | json}}</pre>
+<pre>{{clientForm.get('password').valid | json}}</pre>
+<pre>{{clientForm.get('surname').valid | json}}</pre>
+<pre>{{clientForm.get('city').valid | json}}</pre>
+<pre>{{clientForm.get('street').valid| json}}</pre>
+<pre>{{clientForm.get('houseFlatNumber').valid | json}}</pre>
+<pre>{{clientForm.get('email').valid | json}}</pre>
 
