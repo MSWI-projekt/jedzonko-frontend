@@ -10,6 +10,7 @@ import {RegisterSuccessComponent} from './register-success/register-success.comp
 import {EditProfileComponent} from './logged/client/edit-profile/edit-profile.component';
 import {ChangeEmailComponent} from './logged/client/change-email/change-email.component';
 import {UpdateSuccessComponent} from './logged/client/change-email/update-success/update-success.component';
+import {MainComponent} from "./logged/main/main.component";
 
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'changeEmail', component: ChangeEmailComponent  },
   { path: 'updateSuccess', component: UpdateSuccessComponent  },
   { path: 'registerSuccess', component: RegisterSuccessComponent  },
-  { path: 'logged/client/changeemail', component: ChangeEmailComponent   }
+  { path: 'logged/client/changeemail', component: ChangeEmailComponent   },
+  { path: 'main', component: MainComponent   }
 ];
 
 @NgModule({

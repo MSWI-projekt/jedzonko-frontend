@@ -1,0 +1,41 @@
+html,body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Numans', sans-serif;
+}
+
+.container{
+  height: 100%;
+}
+
+.card{
+  width: 100%;
+  background-color: rgba(0,0,0,0.5) !important;
+}
+
+.card-header h3{
+  color: white;
+}
+
+.btn{
+  color: black;
+  background-color: #FFC312;
+  width: 162px;
+  height: 55px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.btn:hover{
+  background-color: white;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 162px;
+  height: 55px;
+}

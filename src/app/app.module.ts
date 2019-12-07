@@ -13,6 +13,7 @@ import { EditProfileComponent } from './logged/client/edit-profile/edit-profile.
 import { ChangeEmailComponent } from './logged/client/change-email/change-email.component';
 import { UpdateSuccessComponent } from './logged/client/change-email/update-success/update-success.component';
 import {RegisterSuccessComponent} from './register-success/register-success.component';
+import {MainComponent} from "./logged/main/main.component";
 
 
 const appRoutes: Routes = [
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
     ChangeEmailComponent,
     UpdateSuccessComponent,
     RegisterSuccessComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

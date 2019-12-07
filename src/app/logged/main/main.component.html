@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h3>Menu główne</h3>
+      </div>
+
+      <div class="card-body">
+        <div class="btn">
+          <a href="" routerLink="/main" routerLinkActive="active">Strona główna</a>
+        </div>
+        <div *ngIf="customer" class="btn">
+          <a href="" routerLink="/main" routerLinkActive="active">(cust)Historia zamówień</a>
+        </div>
+        <div class="btn">
+          <a href="" routerLink="/editProfile" routerLinkActive="active">Edytuj profil</a>
+        </div>
+        <div class="btn">
+          <a href="" routerLink="/main" routerLinkActive="active">Zarządzanie kontem</a>
+        </div>
+        <div class="btn">
+          <a href="" routerLink="/main" routerLinkActive="active">Zmień hasło</a>
+        </div>
+        <div class="btn">
+          <a href="" routerLink="/changeEmail" routerLinkActive="active">Zmień email</a>
+        </div>
+        <div *ngIf="restaurant" class="btn">
+          <a href="" routerLink="/main" routerLinkActive="active">(rest)Jadłospis</a>
+        </div>
+        <div *ngIf="admin" class="btn">
+          <a href="" routerLink="/main" routerLinkActive="active">(adm)Stwórz konto restauratora</a>
+        </div>
+        <div *ngIf="admin" class="btn">
+          <a href="" routerLink="/main" routerLinkActive="active">(adm)Generuj kody rabatowe</a>
+        </div>
+        <div *ngIf="admin" class="btn">
+          <a href="" routerLink="/main" routerLinkActive="active">(adm)Zarządzaj kontem klienta</a>
+        </div>
+        <div class="btn">
+          <a href="" routerLink="/login" routerLinkActive="active">Wyloguj</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
