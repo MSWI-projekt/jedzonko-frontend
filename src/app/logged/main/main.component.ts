@@ -10,12 +10,13 @@ export class MainComponent implements OnInit {
   customer: boolean;
   restaurant: boolean;
   admin: boolean;
-  userRole: string = "admin";
+  userRole: string;
 
   constructor() {
-    this.customer = this.userRole == "customer";
-    this.restaurant = this.userRole == "restaurant";
-    this.admin = this.userRole == "admin";
+    this.userRole = history.state.role;
+    this.customer = this.userRole == "Customer";
+    this.restaurant = this.userRole == "Restaurant";
+    this.admin = this.userRole == "Admin";
   }
 
   ngOnInit() {

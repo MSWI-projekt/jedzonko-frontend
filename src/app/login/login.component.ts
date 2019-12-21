@@ -1,6 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {LoginService} from './login.service';
+import {Client} from './models/client';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,7 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor(private formBuilder: FormBuilder, private loginService: LoginService) {
+  constructor(private formBuilder: FormBuilder, private loginService: LoginService, private router: Router) {
   }
 
   logintoservice() {
@@ -29,6 +31,10 @@ export class LoginComponent implements OnInit {
   }
 
   Loginsend() {
-    this.loginService.Loginsend({email: this.email, password: this.password}).subscribe();
+    this.loginService.Loginsend({email: this.email, password: this.password}).subscribe(
+      (client) => {
+        this.router.navigate(['main'], {state: {role: (<Client>client).userRole}});
+      }
+    );
   }
 }
